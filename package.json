@@ -1,0 +1,11 @@
+{
+  "name": "codemania-madlibs",
+  "version": "1.0.0",
+  "description": "madlibs for codemania",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raquel Vélez <raquel@rckbt.me>",
+  "license": "ISC"
+}

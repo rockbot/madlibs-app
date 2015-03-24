@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  - if (story)
+    p= story
+  - else
+    form(method='POST' action='')
+      - each blank in blanks
+        label(for="#{blank}")= blank
+        input(id="#{blank}" name="#{blank}")
+      input(type='submit' value='Submit!')

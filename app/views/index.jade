@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  - if (storyIndex)
+    Your story has been saved! Send your friend to /#{storyIndex}!
+  - else
+    form(action='' method='POST')
+      textarea(name='content')
+      input(type='submit' value='Submit!')
+

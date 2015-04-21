@@ -6,7 +6,7 @@ var stories = ['The quick {{color1}} {{noun1}} jumps over the lazy {{noun2}}'];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Mad Libs!' });
 });
 
 router.post('/', function (req, res) {
@@ -17,7 +17,7 @@ router.post('/', function (req, res) {
 
 router.get('/:story', function (req, res) {
   var storyNumber = req.params.story;
-  blanks = mads.parse(stories[storyNumber]); 
+  var blanks = mads.parse(stories[storyNumber]);
   console.log(blanks)
   res.render('story', { blanks: blanks });
 });
@@ -25,7 +25,7 @@ router.get('/:story', function (req, res) {
 router.post('/:story', function (req, res) {
   var storyNumber = req.params.story;
   var body = req.body;
-  completeStory = mads.compile(stories[storyNumber], body);
+  var completeStory = mads.compile(stories[storyNumber], body);
   res.render('story', {story: completeStory});
 });
 

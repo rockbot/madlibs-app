@@ -1,15 +1,21 @@
 var mads = require('madlibify');
+var fs = require('fs');
 
-console.log(process.argv[2])
+fs.readFile('./story.txt', 'utf8', function (err, t) {
+  if (err) {
+    console.error(err);
+  }
+  
+  console.log("HERE'S THE STUFF: ", t)
+  console.log(mads.parse(t));
 
-var t = process.argv[2];
+  var obj = {
+    color1: 'blue',
+    noun1: 'kiwi',
+    noun2: 'biscuit'
+  };
 
-console.log(mads.parse(t));
+  console.log(mads.compile(t,obj));
 
-var obj = {
-  color1: 'blue',
-  noun1: 'kiwi',
-  noun2: 'biscuit'
-};
+});
 
-console.log(mads.compile(t,obj));

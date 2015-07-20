@@ -6,6 +6,7 @@ var stories = ['The quick {{color1}} {{noun1}} jumps over the lazy {{noun2}}'];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log('boom')
   res.render('index', { title: 'Mad Libs!' });
 });
 

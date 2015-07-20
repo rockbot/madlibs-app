@@ -1,4 +1,4 @@
-# Codemania Node.js Workshop
+# Node.js Workshop + Madlibs App
 
 ## Goals
 
